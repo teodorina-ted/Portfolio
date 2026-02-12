@@ -78,7 +78,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="max-w-5xl mx-auto px-6 py-20">
+    <section id="projects" className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-20">
       <h2 className="section-heading mb-16">Case Studies</h2>
       {projects.map((project) => (
         <ProjectCard key={project.title} {...project} />

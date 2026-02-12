@@ -22,10 +22,15 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 nav-blur transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled ? "shadow-sm" : ""
       }`}
-      style={{ borderBottom: "1px solid hsl(var(--border))" }}
+      style={{
+        background: "hsl(var(--background) / 0.85)",
+        backdropFilter: "saturate(180%) blur(20px)",
+        WebkitBackdropFilter: "saturate(180%) blur(20px)",
+        borderBottom: "1px solid hsl(var(--border))",
+      }}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
         <span className="text-sm font-semibold tracking-tight uppercase text-foreground">
