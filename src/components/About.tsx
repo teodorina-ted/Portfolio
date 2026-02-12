@@ -11,7 +11,7 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="w-full rounded-2xl overflow-hidden shadow-sm aspect-[3/4] bg-secondary flex items-center justify-center">
+          <div className="w-full rounded-2xl overflow-hidden shadow-sm aspect-[3/4] bg-secondary flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-700">
             <img
               src={aboutPhoto}
               alt="Teodorina L. — DevOps & Data Strategy"
@@ -56,7 +56,7 @@ const About = () => {
             <div>
               <span className="label-micro">Favorite Authors</span>
               <p className="text-sm text-foreground/80">
-                Yuval Noah Harari, Robert Sapolsky.
+                Yuval Noah Harari, Robert Sapolsky, Jordan Peterson.
               </p>
             </div>
             <div className="flex items-center">
