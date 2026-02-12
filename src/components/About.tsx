@@ -39,9 +39,6 @@ const About = () => {
             Strategist, decoding human behavior. Today, I am evolving, achieving
             my Senior Technician in DevOps diploma at ITS Olivetti, Cesena.
           </p>
-          <p className="text-lg mb-10 leading-relaxed text-muted-foreground">
-            I don't just build websites; I engineer user journeys based on data.
-          </p>
 
           <div className="grid grid-cols-2 gap-8 border-t border-border pt-8">
             <div>
