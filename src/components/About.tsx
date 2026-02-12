@@ -50,7 +50,7 @@ const About = () => {
             <div>
               <span className="label-micro">Hobbies</span>
               <p className="text-sm text-foreground/80">
-                Cooking, Cinema, Fitness.
+                Experimental Bio Cooking, Cinema, Fitness.
               </p>
             </div>
             <div>
@@ -60,7 +60,7 @@ const About = () => {
               </p>
             </div>
             <div className="flex items-center">
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground serif-italic">
                 P.S. I write poems too.
               </p>
             </div>
@@ -69,7 +69,7 @@ const About = () => {
           <div className="mt-10">
             <a
               href="#contact"
-              className="text-xl md:text-2xl font-semibold text-accent hover:underline transition"
+              className="text-sm font-medium font-sans text-accent hover:underline transition"
             >
               We could always discuss in English, Russian, Romanian — or why not, Italian.
             </a>
