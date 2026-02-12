@@ -42,7 +42,7 @@ const ProjectCard = ({
 
       {/* Preview */}
       <div
-        className="w-full h-[500px] border-b border-border relative overflow-hidden"
+        className="w-full h-[250px] sm:h-[350px] md:h-[500px] border-b border-border relative overflow-hidden"
         style={{ background: "hsl(var(--preview-bg))" }}
       >
         <iframe
@@ -54,7 +54,7 @@ const ProjectCard = ({
       </div>
 
       {/* Details */}
-      <div className="p-10 grid md:grid-cols-2 gap-12">
+      <div className="p-6 sm:p-8 md:p-10 grid md:grid-cols-2 gap-8 md:gap-12">
         <div>
           <h4 className="label-micro mb-4">The Business</h4>
           <p className="text-sm mb-6 text-foreground/80">{business}</p>
@@ -86,7 +86,7 @@ const ProjectCard = ({
 
       {/* Improvements */}
       {improvements && improvements.length > 0 && (
-        <div className="px-10 pb-10 border-t border-border pt-8">
+        <div className="px-6 sm:px-8 md:px-10 pb-8 md:pb-10 border-t border-border pt-6 md:pt-8">
           <h4 className="label-micro mb-4 flex items-center gap-2">
             <Lightbulb size={14} className="text-accent" />
             To Improve
