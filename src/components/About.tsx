@@ -71,7 +71,7 @@ const About = () => {
               href="#contact"
               className="text-sm font-medium font-sans text-accent hover:underline transition"
             >
-              We could always discuss in English, Russian, Romanian — or why not, Italian.
+              We could always discuss in English, Russian, Romanian, and any soon - Italian.
             </a>
           </div>
         </motion.div>
