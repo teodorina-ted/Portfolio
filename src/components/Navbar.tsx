@@ -3,7 +3,12 @@ import { Moon, Sun } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(() => {
+    if (typeof window !== "undefined") {
+      return document.documentElement.classList.contains("dark");
+    }
+    return false;
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -17,13 +22,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 nav-blur transition-shadow duration-300 ${
+      className={`fixed top-0 w-full z-50 nav-blur transition-all duration-300 ${
         scrolled ? "shadow-sm" : ""
       }`}
       style={{ borderBottom: "1px solid hsl(var(--border))" }}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
-        <span className="text-sm font-semibold tracking-tight uppercase">
+        <span className="text-sm font-semibold tracking-tight uppercase text-foreground">
           Teodorina L.
         </span>
         <div className="flex items-center gap-8 text-[11px] uppercase tracking-widest text-muted-foreground">
@@ -55,15 +60,12 @@ const Navbar = () => {
           >
             P.IVA
           </a>
-          <a
-            href="#contact"
-            className="touch-btn"
-          >
+          <a href="#contact" className="touch-btn">
             Let's Get in Touch
           </a>
           <button
             onClick={() => setDark(!dark)}
-            className="opacity-50 hover:opacity-100 transition p-1"
+            className="text-muted-foreground hover:text-foreground transition p-1"
             aria-label="Toggle dark mode"
           >
             {dark ? <Sun size={16} /> : <Moon size={16} />}

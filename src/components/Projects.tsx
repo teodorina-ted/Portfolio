@@ -10,6 +10,7 @@ const projects = [
       "A high-volume Miami Real Estate agency managing 200+ active agents across South Florida. The company was scaling rapidly but relied on manual data entry, fragmented spreadsheets, and disconnected platforms — creating bottlenecks in onboarding, compliance tracking, and commission processing.",
     goal: 'Architect a fully automated <strong>\"Zero-Friction\" onboarding pipeline</strong> by synchronizing <strong>Shopify</strong> (payment processing & subscription management), <strong>Wix</strong> (public-facing agent portal & frontend), and <strong>AmoCRM</strong> (internal CRM & backend workflows). The system needed to auto-generate agent profiles, trigger DBPR compliance checks, and route financial reporting — reducing onboarding time from 3 days to under 2 hours.',
     skills: [
+      "WordPress",
       "CRM Implementation",
       "Wix Admin",
       "DBPR Compliance",

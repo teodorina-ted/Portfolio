@@ -4,10 +4,28 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-sm">
         <div>
           <h4 className="label-micro !text-footer-muted mb-6">Contact</h4>
-          <p className="mb-2 text-footer-foreground/80 hover:text-footer-foreground transition">
+          <a
+            href="mailto:teodorina.business@gmail.com"
+            className="block mb-2 text-footer-foreground/80 hover:text-footer-foreground transition"
+          >
             teodorina.business@gmail.com
-          </p>
-          <p className="mb-2 text-footer-foreground/80">+39 328 145 2170</p>
+          </a>
+          <div className="flex items-center gap-3 mb-2">
+            <a
+              href="tel:+393281452170"
+              className="text-footer-foreground/80 hover:text-footer-foreground transition"
+            >
+              +39 328 145 2170
+            </a>
+            <a
+              href="https://wa.me/393281452170"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-footer-muted hover:text-green-500 transition text-base"
+            >
+              <i className="fab fa-whatsapp" />
+            </a>
+          </div>
           <p className="text-footer-muted">Cesena, Italy, 47521</p>
         </div>
 
