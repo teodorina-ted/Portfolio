@@ -1,6 +1,6 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface TimelineEntry {
   year: string;
@@ -63,65 +63,18 @@ const entries: TimelineEntry[] = [
 
 const Timeline = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
-
-  const updateScrollState = () => {
-    const el = scrollRef.current;
-    if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 10);
-    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
-  };
 
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
-    // Auto-scroll to the end (2026+)
     el.scrollLeft = el.scrollWidth;
-    setTimeout(updateScrollState, 100);
-    el.addEventListener("scroll", updateScrollState);
-    window.addEventListener("resize", updateScrollState);
-    return () => {
-      el.removeEventListener("scroll", updateScrollState);
-      window.removeEventListener("resize", updateScrollState);
-    };
   }, []);
 
-  const scroll = (direction: "left" | "right") => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const amount = 300;
-    el.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
-  };
-
   return (
-    <section className="max-w-[90rem] mx-auto px-6 pb-8 relative">
-      {/* Left Arrow */}
-      <button
-        onClick={() => scroll("left")}
-        className={`absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-card border border-border shadow-md transition-opacity duration-200 ${
-          canScrollLeft ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-        aria-label="Scroll left"
-      >
-        <ChevronLeft size={20} className="text-muted-foreground" />
-      </button>
-
-      {/* Right Arrow */}
-      <button
-        onClick={() => scroll("right")}
-        className={`absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-card border border-border shadow-md transition-opacity duration-200 ${
-          canScrollRight ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-        aria-label="Scroll right"
-      >
-        <ChevronRight size={20} className="text-muted-foreground" />
-      </button>
-
+    <section className="max-w-[90rem] mx-auto px-6 pb-8">
       <div
         ref={scrollRef}
-        className="flex overflow-x-auto gap-0 py-12 border-t border-b border-border items-center scroll-smooth"
-        style={{ scrollbarWidth: "none" }}
+        className="flex overflow-x-auto gap-0 py-12 border-t border-b border-border items-center scroll-smooth timeline-scroll"
       >
         {entries.map((entry, i) => (
           <div key={i} className="flex items-center shrink-0">
