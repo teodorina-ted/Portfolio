@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import aboutPhoto from "@/assets/about-photo.png";
 
 const About = () => {
   return (
@@ -11,12 +12,11 @@ const About = () => {
           transition={{ duration: 0.7 }}
         >
           <div className="w-full rounded-2xl overflow-hidden shadow-sm aspect-[3/4] bg-secondary flex items-center justify-center">
-            <div className="text-center p-8">
-              <div className="w-32 h-32 rounded-full bg-muted mx-auto mb-4 flex items-center justify-center text-4xl font-semibold text-muted-foreground">
-                TL
-              </div>
-              <p className="text-sm text-muted-foreground">Teodorina L.</p>
-            </div>
+            <img
+              src={aboutPhoto}
+              alt="Teodorina L. — DevOps & Data Strategy"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
 
