@@ -59,7 +59,7 @@ const projects = [
   },
   {
     status: "Ongoing (Preview)",
-    statusColor: "text-green-500",
+    statusColor: "text-green-700 dark:text-green-400",
     title: "Indomitum",
     previewUrl: "https://indomitum.lovable.app/",
     business:
