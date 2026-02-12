@@ -60,7 +60,7 @@ const About = () => {
               </p>
             </div>
             <div className="flex items-center">
-              <p className="text-lg serif-italic text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 P.S. I write poems too.
               </p>
             </div>
@@ -69,7 +69,7 @@ const About = () => {
           <div className="mt-10">
             <a
               href="#contact"
-              className="text-sm text-accent hover:underline transition serif-italic"
+              className="text-xl md:text-2xl font-semibold text-accent hover:underline transition"
             >
               We could always discuss in English, Russian, Romanian — or why not, Italian.
             </a>

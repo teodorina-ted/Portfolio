@@ -36,10 +36,14 @@ const Contact = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="section-heading mb-4">Let's Get in Touch</h2>
-        <p className="mb-10 text-muted-foreground">
-          Leave your details and an offer; I will respond with strategy and data.
-        </p>
+        {!submitted && (
+          <>
+            <h2 className="section-heading mb-4">Let's Get in Touch</h2>
+            <p className="mb-10 text-muted-foreground">
+              Leave your details and an offer; I will respond with strategy and data.
+            </p>
+          </>
+        )}
 
         {submitted ? (
           <div className="py-12 text-center">
