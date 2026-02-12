@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 interface TimelineEntry {
+  year: string;
   title: string;
   subtitle?: string;
   description?: string;
@@ -12,40 +13,48 @@ interface TimelineEntry {
 
 const entries: TimelineEntry[] = [
   {
+    year: "2015",
     title: "Pedagogical Psychology",
     description: "Studied human behavior fundamentals & learning logic.",
   },
   {
+    year: "2017",
     title: "Seed Forum",
     subtitle: "Office & Event Manager",
     tags: ["Logistics", "PR", "Recruiting"],
   },
   {
+    year: "2019",
     title: "London Foster",
     subtitle: "Onboarding Manager",
     tags: ["CRM Implementation", "UserTraining", "WixAdmin"],
   },
   {
+    year: "2020",
     title: "Meta (Telus)",
     subtitle: "Ads Expert",
     tags: ["ROI Analysis", "A/B Testing", "KPIs"],
   },
   {
+    year: "2021",
     title: "Google (TechFirefly)",
     subtitle: "AI Content Moderator",
     tags: ["DataQuality", "AI Training", "Compliance"],
   },
   {
+    year: "2023",
     title: "FlashStart",
     subtitle: "Tech & SEO Internship",
     tags: ["CyberSecurity", "DNS", "MalwareFilter"],
   },
   {
+    year: "2024",
     title: "ITS Academy Olivetti",
     subtitle: "DevOps Senior Technician",
     tags: ["CloudArchitecture", "Docker", "CI/CD"],
   },
   {
+    year: "2026+",
     title: "Big Data & AI Specialist",
     description: "Building predictive models and scalable data infrastructure.",
     highlight: true,
@@ -71,6 +80,9 @@ const Timeline = () => {
               transition={{ delay: i * 0.08, duration: 0.5 }}
               className="min-w-[220px] md:min-w-[240px] px-6 flex flex-col"
             >
+              <span className={`text-[10px] uppercase tracking-[0.2em] mb-2 ${entry.highlight ? "text-accent" : "text-muted-foreground"}`}>
+                {entry.year}
+              </span>
               <p className={`text-base font-semibold mb-1 ${entry.highlight ? "text-accent" : ""}`}>
                 {entry.title}
               </p>
@@ -87,10 +99,7 @@ const Timeline = () => {
               {entry.tags && (
                 <div className="flex flex-wrap gap-1 mt-1">
                   {entry.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[10px] text-muted-foreground"
-                    >
+                    <span key={tag} className="text-[10px] text-muted-foreground">
                       #{tag}
                     </span>
                   ))}
@@ -98,10 +107,7 @@ const Timeline = () => {
               )}
             </motion.div>
             {i < entries.length - 1 && (
-              <ArrowRight
-                className="shrink-0 text-muted-foreground/40"
-                size={18}
-              />
+              <ArrowRight className="shrink-0 text-muted-foreground/40" size={18} />
             )}
           </div>
         ))}
