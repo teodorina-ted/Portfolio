@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Lightbulb } from "lucide-react";
 
 interface ProjectCardProps {
   status: string;
@@ -9,6 +10,7 @@ interface ProjectCardProps {
   goal: string;
   skills: string[];
   websiteUrl: string;
+  improvements?: string[];
 }
 
 const ProjectCard = ({
@@ -20,6 +22,7 @@ const ProjectCard = ({
   goal,
   skills,
   websiteUrl,
+  improvements,
 }: ProjectCardProps) => {
   return (
     <motion.div
@@ -80,6 +83,24 @@ const ProjectCard = ({
           </a>
         </div>
       </div>
+
+      {/* Improvements */}
+      {improvements && improvements.length > 0 && (
+        <div className="px-10 pb-10 border-t border-border pt-8">
+          <h4 className="label-micro mb-4 flex items-center gap-2">
+            <Lightbulb size={14} className="text-accent" />
+            To Improve
+          </h4>
+          <ul className="grid md:grid-cols-2 gap-x-8 gap-y-2">
+            {improvements.map((item) => (
+              <li key={item} className="text-sm text-foreground/70 flex items-start gap-2">
+                <span className="text-accent mt-1 shrink-0">→</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </motion.div>
   );
 };

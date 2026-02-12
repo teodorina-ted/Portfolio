@@ -13,9 +13,14 @@ const Footer = () => {
 
         <div>
           <h4 className="label-micro !text-footer-muted mb-6">Legal</h4>
-          <p className="text-footer-muted hover:text-footer-foreground transition mb-2 cursor-pointer">
+          <a
+            href="Certificato Partita Iva.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-footer-muted hover:text-footer-foreground transition mb-2 cursor-pointer"
+          >
             P.IVA: 04825460407
-          </p>
+          </a>
           <p className="text-footer-muted hover:text-footer-foreground transition mb-2 cursor-pointer">
             Terms &amp; Policies
           </p>
@@ -47,6 +52,14 @@ const Footer = () => {
               className="text-footer-muted hover:text-footer-foreground transition"
             >
               <i className="fab fa-github" />
+            </a>
+            <a
+              href="https://www.instagram.com/teodorinated/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-footer-muted hover:text-pink-500 transition"
+            >
+              <i className="fab fa-instagram" />
             </a>
           </div>
         </div>

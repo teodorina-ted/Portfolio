@@ -1,13 +1,19 @@
 import { useState, useEffect } from "react";
+import { Moon, Sun } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", dark);
+  }, [dark]);
 
   return (
     <nav
@@ -34,11 +40,34 @@ const Navbar = () => {
             About
           </a>
           <a
+            href="TeodorinaLungu_2026.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition hidden md:block"
+          >
+            CV
+          </a>
+          <a
+            href="Certificato Partita Iva.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition hidden md:block"
+          >
+            P.IVA
+          </a>
+          <a
             href="#contact"
             className="touch-btn"
           >
             Let's Get in Touch
           </a>
+          <button
+            onClick={() => setDark(!dark)}
+            className="opacity-50 hover:opacity-100 transition p-1"
+            aria-label="Toggle dark mode"
+          >
+            {dark ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
         </div>
       </div>
     </nav>

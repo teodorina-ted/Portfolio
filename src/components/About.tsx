@@ -70,19 +70,12 @@ const About = () => {
           </div>
 
           <div className="mt-10">
-            <p className="label-micro">Languages</p>
-            <div className="flex gap-2 flex-wrap">
-              {["EN (C2)", "RU (C2)", "RO (Native)", "IT (B2/C1)"].map(
-                (lang) => (
-                  <span
-                    key={lang}
-                    className="text-xs border border-border px-2.5 py-1 rounded"
-                  >
-                    {lang}
-                  </span>
-                )
-              )}
-            </div>
+            <a
+              href="#contact"
+              className="text-sm text-accent hover:underline transition serif-italic"
+            >
+              We could always discuss in English, Russian, Romanian — or why not, Italian.
+            </a>
           </div>
         </motion.div>
       </div>
