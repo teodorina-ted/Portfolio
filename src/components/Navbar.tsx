@@ -50,7 +50,7 @@ const Navbar = () => {
             About
           </a>
           <a
-            href="/documents/TeodorinaLungu_2026.pdf"
+            href="/Portfolio/documents/TeodorinaLungu_2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-foreground transition hidden md:block"
@@ -58,7 +58,7 @@ const Navbar = () => {
             CV
           </a>
           <a
-            href="/documents/Certificato_Partita_Iva.pdf"
+            href="/Portfolio/documents/Certificato_Partita_Iva.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-foreground transition hidden md:block"
