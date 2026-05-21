@@ -24,14 +24,13 @@ const projects = [
       "DevOps",
     ],
     websiteUrl: "https://annotateai.it/",
-    iframeScale: 0.6,
   },
   
   {
     status: "Ongoing (Preview)",
     statusColor: "text-green-700 dark:text-green-400",
     title: "Indomitum",
-    previewUrl: "https://indomitum.online",
+    previewUrl: "https://indomitum.lovable.app/",
     business:
       "A cloud-native CRM prototype designed for industrial warehouse and logistics automation. The platform targets mid-size warehouses that still rely on paper-based tracking and disconnected inventory systems — bridging the gap between physical operations and digital intelligence.",
     goal: "Build a <strong>real-time data bridge</strong> between mobile barcode/QR scanning on the warehouse floor and a cloud-hosted database with intuitive dashboard visualization. Integrating <strong>Cloud Architecture</strong> (Docker, CI/CD pipelines) into a CRM that warehouse operators can actually use — prioritizing UX simplicity over feature bloat.",
@@ -51,8 +50,7 @@ const projects = [
       "Debugging",
       "CI/CD",
     ],
-    websiteUrl: "https://indomitum.online",
-    iframeScale: 0.75,
+    websiteUrl: "https://indomitum.lovable.app/",
     improvements: [
       "Cloud backend integration with real-time database sync",
       "Delivery tracking system with live GPS and status updates",
@@ -84,7 +82,6 @@ const projects = [
       "SEO Optimization",
     ],
     websiteUrl: "https://realevent.lovable.app",
-    iframeScale: 0.75,
     improvements: [
       "Native mobile app (iOS & Android) with push notifications",
       "AI-powered event recommendations based on user preferences",
@@ -95,29 +92,28 @@ const projects = [
   },
   {
     status: "Launching Soon",
-    statusColor: "text-amber-500 dark:text-amber-400",
-    title: "Beerloga",
+    statusColor: "text-amber-600 dark:text-amber-400",
+    title: "BeerLoga",
     previewUrl: "https://beerloga.beerloga-balti.workers.dev/",
     business:
-      "A digital platform for Beerloga, a craft beer bar in Bălți, Moldova. The project reimagines the bar's online presence — transforming a local staple into a polished, modern brand experience that can attract both regulars and new customers through digital discovery.",
-    goal: "Build a <strong>brand-forward web presence</strong> that communicates the bar's personality and offering at a glance. The design prioritizes <strong>atmosphere and identity</strong> over feature complexity — fast loading, mobile-first, and visually memorable. A foundation ready to expand with online reservations, event listings, and loyalty features.",
+      "A digital platform for BeerLoga, a craft beer bar & brand. The project focuses on creating a modern web presence that reflects the bar's identity — combining a strong visual language with functional features for menu discovery, event announcements, and brand storytelling.",
+    goal: "Design and build a <strong>brand-forward web experience</strong> that turns visitors into regulars. The platform integrates an interactive menu, event highlights, and a visual identity system — all optimized for mobile-first browsing in a bar environment where quick, intuitive access matters.",
     skills: [
       "React",
-      "Brand Design",
-      "Mobile-First UX",
       "Cloudflare Workers",
-      "Performance Optimization",
+      "Brand Identity",
       "UI/UX Design",
-      "Visual Identity",
-      "Local SEO",
+      "Mobile-First Design",
+      "Menu Architecture",
+      "Performance Optimization",
+      "Visual Storytelling",
     ],
     websiteUrl: "https://beerloga.beerloga-balti.workers.dev/",
     improvements: [
-      "Online table reservation system",
-      "Weekly events and live music calendar",
-      "Digital menu with seasonal updates",
-      "Loyalty program integration",
-      "Instagram feed auto-sync for social proof",
+      "Online reservation and table booking system",
+      "Live tap list with real-time beer availability",
+      "Loyalty program integration for regulars",
+      "Event calendar with push notifications",
     ],
   },
   {
@@ -155,7 +151,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+    <section id="projects" className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-20">
       <h2 className="section-heading mb-16">Case Studies</h2>
       {projects.map((project) => (
         <ProjectCard key={project.title} {...project} />

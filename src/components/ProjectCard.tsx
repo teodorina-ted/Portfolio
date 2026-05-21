@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Lightbulb } from "lucide-react";
-import { useState } from "react";
 
 interface ProjectCardProps {
   status: string;
@@ -12,7 +11,6 @@ interface ProjectCardProps {
   skills: string[];
   websiteUrl: string;
   improvements?: string[];
-  iframeScale?: number;
 }
 
 const ProjectCard = ({
@@ -25,25 +23,14 @@ const ProjectCard = ({
   skills,
   websiteUrl,
   improvements,
-  iframeScale = 1,
 }: ProjectCardProps) => {
-  const scale = iframeScale;
-  const invScale = 1 / scale;
-  const [hovered, setHovered] = useState(false);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className="rounded-2xl border border-border bg-card overflow-hidden mb-24 transition-all duration-500 hover:border-muted-foreground/40"
-      style={{
-        filter: hovered ? "grayscale(0%)" : "grayscale(100%)",
-        transition: "filter 0.6s ease, border-color 0.3s ease",
-      }}
+      className="project-card rounded-2xl border border-border bg-card overflow-hidden mb-24 transition-all duration-500 hover:border-muted-foreground/40"
     >
       {/* Header */}
       <div className="p-6 border-b border-border flex justify-between items-center bg-secondary">
@@ -53,44 +40,19 @@ const ProjectCard = ({
         <span className="text-lg font-semibold">{title}</span>
       </div>
 
-      {/* Preview — mobile uses original simple iframe, desktop uses scale */}
+      {/* Preview */}
       <div
-        className="w-full border-b border-border relative"
+        className="project-preview w-full h-[500px] sm:h-[350px] md:h-[500px] border-b border-border relative overflow-hidden"
         style={{ background: "hsl(var(--preview-bg))" }}
       >
-        {/* Mobile: original behavior, clip bottom to hide iframe's internal scrollbar */}
-        <div className="block sm:hidden" style={{ height: "500px", overflow: "hidden", clipPath: "inset(0 0 20px 0)" }}>
-          <iframe
-            src={previewUrl}
-            title={`${title} Preview`}
-            className="w-full border-none"
-            style={{ height: "520px", display: "block" }}
-            loading="lazy"
-          />
-        </div>
-
-        {/* Desktop: scale per-project to avoid horizontal scroll */}
-        <div className="hidden sm:block" style={{ height: "600px", overflow: "hidden" }}>
-          <div style={{
-            height: "620px",
-            overflow: "hidden",
-            clipPath: "inset(0 0 20px 0)",
-          }}>
-            <iframe
-              src={previewUrl}
-              title={`${title} Preview`}
-              loading="lazy"
-              style={{
-                border: "none",
-                width: `${invScale * 100}%`,
-                height: `${invScale * 100}%`,
-                transform: `scale(${scale})`,
-                transformOrigin: "top left",
-                display: "block",
-              }}
-            />
-          </div>
-        </div>
+        <iframe
+          src={previewUrl}
+          title={`${title} Preview`}
+          className="w-full h-full border-none"
+          style={{ overflowX: "hidden", maxWidth: "100%" }}
+          loading="lazy"
+          scrolling="no"
+        />
       </div>
 
       {/* Details */}
@@ -113,7 +75,7 @@ const ProjectCard = ({
               </span>
             ))}
           </div>
-          <a
+          <a 
             href={websiteUrl}
             target="_blank"
             rel="noopener noreferrer"
