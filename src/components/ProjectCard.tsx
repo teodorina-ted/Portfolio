@@ -42,7 +42,7 @@ const ProjectCard = ({
 
       {/* Preview */}
       <div
-        className="project-preview w-full h-[500px] sm:h-[350px] md:h-[500px] border-b border-border relative overflow-hidden"
+        className="project-preview w-full h-[600px] sm:h-[450px] md:h-[600px] border-b border-border relative overflow-hidden"
         style={{ background: "hsl(var(--preview-bg))" }}
       >
         <iframe
@@ -75,7 +75,7 @@ const ProjectCard = ({
               </span>
             ))}
           </div>
-          <a 
+          <a
             href={websiteUrl}
             target="_blank"
             rel="noopener noreferrer"

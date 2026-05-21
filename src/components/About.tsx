@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import aboutPhoto from "@/assets/about-photo.png";
 
 const About = () => {
   return (
@@ -10,12 +11,12 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="w-full rounded-2xl overflow-hidden shadow-sm aspect-[3/4] bg-secondary flex items-center justify-center">
-            <div className="flex flex-col items-center gap-6 px-10 text-center select-none">
-              <span className="text-7xl font-semibold tracking-tighter text-foreground/10">TL</span>
-              <div className="w-12 h-px bg-border" />
-              <span className="text-xs uppercase tracking-widest text-muted-foreground/50">Strategy · Data · DevOps</span>
-            </div>
+          <div className="w-full rounded-2xl overflow-hidden shadow-sm aspect-[3/4] bg-secondary flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-700">
+            <img
+              src={aboutPhoto}
+              alt="Teodorina L. — DevOps & Data Strategy"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
 
