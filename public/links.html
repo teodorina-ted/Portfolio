@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <title>Teodorina Lungu</title>
 <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -17,7 +19,7 @@ body{font-family:'Inter',sans-serif;background:#b2b0ad;min-height:100vh;display:
 .bio span{display:block}
 .motto{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;color:#888;font-size:12.5px;margin-top:.6rem;margin-bottom:1.8rem;text-align:center}
 .links{display:flex;flex-direction:column;gap:10px;margin-bottom:2rem}
-.link-btn{display:flex;align-items:center;gap:13px;padding:14px 16px;border-radius:16px;border:0.5px solid #2a2a2a;background:#161616;text-decoration:none;color:#fff;transition:background .2s,border-color .2s;position:relative;overflow:hidden}
+.link-btn{display:flex;align-items:center;gap:13px;padding:14px 16px;border-radius:16px;border:0.5px solid #2a2a2a;background:#161616;text-decoration:none;color:#fff;transition:background .2s,border-color .2s;position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;user-select:none}
 .link-btn::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.07),transparent)}
 .link-btn:hover{background:#1e1e1e;border-color:#444}
 .icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(145deg,#2c2c2c,#1a1a1a);border:0.5px solid #333;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;overflow:hidden}
@@ -47,30 +49,30 @@ footer{font-size:11px;color:#444;text-align:center;letter-spacing:.3px}
   </div>
   <div class="motto">In data we trust.</div>
   <div class="links">
-    <a class="link-btn" href="#">
+    <a class="link-btn" target="_blank" rel="noopener" href="#">
       <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 15V3m0 12-4-4m4 4 4-4"/><path d="M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg></div>
       <div class="link-text"><span class="link-title">PPT — A Race to Win</span><span class="link-sub">2026 · 5th Edition</span></div>
-      <span class="arrow">↗</span>
+      
     </a>
-    <a class="link-btn" href="https://teodorina.tech">
+    <a class="link-btn" target="_blank" rel="noopener" href="https://teodorina.tech">
       <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
       <div class="link-text"><span class="link-title">Portfolio</span><span class="link-sub">teodorina.tech</span></div>
-      <span class="arrow">↗</span>
+      
     </a>
-    <a class="link-btn" href="https://github.com/teodorina-ted/">
+    <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/teodorina-ted/">
       <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
       <div class="link-text"><span class="link-title">GitHub</span></div>
-      <span class="arrow">↗</span>
+      
     </a>
-    <a class="link-btn" href="https://www.linkedin.com/in/teodorina/">
+    <a class="link-btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/teodorina/">
       <div class="icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
       <div class="link-text"><span class="link-title">LinkedIn</span></div>
-      <span class="arrow">↗</span>
+      
     </a>
-    <a class="link-btn" href="mailto:info@teodorina.tech">
+    <a class="link-btn" target="_blank" rel="noopener" href="mailto:info@teodorina.tech">
       <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></div>
       <div class="link-text"><span class="link-title">info@teodorina.tech</span></div>
-      <span class="arrow">↗</span>
+      
     </a>
   </div>
   <footer>© 2026 Teodorina Lungu</footer>
