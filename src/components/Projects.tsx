@@ -30,7 +30,7 @@ const projects = [
     status: "Ongoing (Preview)",
     statusColor: "text-green-700 dark:text-green-400",
     title: "Indomitum",
-    previewUrl: "https://indomitum.lovable.app/",
+    previewUrl: "https://indomitum.online/",
     business:
       "A cloud-native CRM prototype designed for industrial warehouse and logistics automation. The platform targets mid-size warehouses that still rely on paper-based tracking and disconnected inventory systems — bridging the gap between physical operations and digital intelligence.",
     goal: "Build a <strong>real-time data bridge</strong> between mobile barcode/QR scanning on the warehouse floor and a cloud-hosted database with intuitive dashboard visualization. Integrating <strong>Cloud Architecture</strong> (Docker, CI/CD pipelines) into a CRM that warehouse operators can actually use — prioritizing UX simplicity over feature bloat.",
