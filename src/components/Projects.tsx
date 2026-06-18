@@ -50,7 +50,7 @@ const projects = [
       "Debugging",
       "CI/CD",
     ],
-    websiteUrl: "https://indomitum.lovable.app/",
+    websiteUrl: "https://indomitum.online/",
     improvements: [
       "Cloud backend integration with real-time database sync",
       "Delivery tracking system with live GPS and status updates",
