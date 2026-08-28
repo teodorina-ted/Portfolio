@@ -37,28 +37,13 @@ const Navbar = () => {
           Teodorina L.
         </span>
         <div className="flex items-center gap-8 text-[11px] uppercase tracking-widest text-muted-foreground">
-          <a
-            href="#projects"
-            className="hover:text-foreground transition hidden md:block"
-          >
+          <a href="#projects" className="hover:text-foreground transition hidden md:block">
             Projects
           </a>
-          <a
-            href="https://teodorina.tech/links"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground transition hidden md:block"
-          >
-          Cyber Security Conference - IMOLA 2026
-          </a>
-          
-          <a
-            href="#about"
-            className="hover:text-foreground transition hidden md:block"
-          >
+          <a href="#about" className="hover:text-foreground transition hidden md:block">
             About
           </a>
-          <a
+          
             href="/documents/TeodorinaLungu_2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -66,7 +51,7 @@ const Navbar = () => {
           >
             CV
           </a>
-          <a
+          
             href="/documents/Certificato_Partita_Iva.pdf"
             target="_blank"
             rel="noopener noreferrer"
