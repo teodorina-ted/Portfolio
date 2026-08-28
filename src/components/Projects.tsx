@@ -109,7 +109,7 @@ const projects = [
     ],
     websiteUrl: "https://realevent.lovable.app",
     improvements: [
-      "Native mobile app (iOS & Android) with push notifications",
+      "Native mobile app (iOS & Android) with push notifications made with vibe coding",
       "AI-powered event recommendations based on user preferences",
       "Integration with Instagram/Facebook events auto-import",
       "In-app chat and group creation for event attendees",
