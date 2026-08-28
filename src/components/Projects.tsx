@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 const projects = [
   {
   status: "Live — Pilot",
-  statusColor: "text-yellow-500",
+  statusColor: "text-green-500",
   title: "DataPrep ONIT",
   previewUrl: "https://dataprep-1-n6uw.onrender.com",
   business:
