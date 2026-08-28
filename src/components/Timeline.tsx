@@ -52,7 +52,7 @@ const entries: TimelineEntry[] = [
   {
     year: "2025",
     title: "FlashStart",
-    subtitle: "Tech & SEO Internship",
+    subtitle: "Tech & Market Expansion Internship",
     tags: ["CyberSecurity", "DNS", "MalwareFilter"],
   },
   {
