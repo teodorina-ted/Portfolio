@@ -38,7 +38,7 @@ const Navbar = () => {
         </span>
         <div className="flex items-center gap-8 text-[11px] uppercase tracking-widest text-muted-foreground">
           <a href="#projects" className="hover:text-foreground transition hidden md:block">Projects</a>
-                    <a href="https://teodorina.tech/links" className="hover:text-foreground transition hidden md:block">Events</a>
+          <a href="https://teodorina.tech/links" className="hover:text-foreground transition hidden md:block">Events</a>
 
           <a href="#about" className="hover:text-foreground transition hidden md:block">About</a>
           <a href="/documents/TeodorinaLungu_2026.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition hidden md:block">CV</a>
