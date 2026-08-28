@@ -10,18 +10,14 @@ const Footer = () => {
           >
             teodorina.business@gmail.com
           </a>
-          <a
-            href="https://teodorina.tech/links"
-            className="block mb-2 text-footer-foreground/80 hover:text-footer-foreground transition"
-          >
-          Cyber Security Conference - IMOLA 2026
-          </a>
+        
           <a
             href="tel:+393281452170"
             className="block mb-2 text-footer-foreground/80 hover:text-footer-foreground transition"
           >
             +39 328 145 2170
           </a>
+          
           <p className="text-footer-muted">Cesena, Italy, 47521</p>
         </div>
 
