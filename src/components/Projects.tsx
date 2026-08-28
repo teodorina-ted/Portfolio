@@ -7,7 +7,7 @@ const projects = [
   title: "DataPrep",
   previewUrl: "https://dataprep-1-n6uw.onrender.com",
   business:
-    "A full-stack data preparation platform built for my recent ainternship in AI team. Addresses the bottleneck of manual data cleaning in ML pipelines — where inconsistent formats, missing values, and schema drift slow down every downstream process.",
+    "A full-stack data preparation platform built for my recent my recent AI Department internship. Addresses the bottleneck of manual data cleaning in ML pipelines — where inconsistent formats, missing values, and schema drift slow down every downstream process.",
   goal: 'Architect a <strong>modular data preparation pipeline</strong> that covers the full cleaning lifecycle: <strong>CSV/Excel/JSON ingestion</strong>, missing value imputation (KNN, CTGAN, statistical strategies), outlier detection, bulk file merging, predictive analytics (Linear Regression, Random Forest, Gradient Boosting), and data validation against real baselines. Built to be adapted by non-technical teams with minimal configuration.',
   skills: [
     "Python",
