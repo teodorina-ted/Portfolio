@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="bg-footer text-footer-foreground py-20 px-6 mt-10">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 text-sm">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-sm">
         <div>
           <h4 className="label-micro !text-footer-muted mb-6">Contact</h4>
           
@@ -10,12 +10,14 @@ const Footer = () => {
           >
             teodorina.business@gmail.com
           </a>
+        
           
             href="tel:+393281452170"
             className="block mb-2 text-footer-foreground/80 hover:text-footer-foreground transition"
           >
             +39 328 145 2170
           </a>
+          
           <p className="text-footer-muted">Cesena, Italy, 47521</p>
         </div>
         <div>
@@ -31,18 +33,6 @@ const Footer = () => {
           <p className="text-footer-muted hover:text-footer-foreground transition mb-2 cursor-pointer">
             Terms &amp; Policies
           </p>
-        </div>
-        <div>
-          <h4 className="label-micro !text-footer-muted mb-6">Events</h4>
-          
-            href="https://teodorina.tech/links"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-footer-muted hover:text-footer-foreground transition mb-2"
-          >
-            Cyber Security Conference
-            <span className="block text-[10px] text-footer-muted mt-0.5">Imola · 2026</span>
-          </a>
         </div>
         <div>
           <h4 className="label-micro !text-footer-muted mb-6">Connect</h4>
@@ -88,5 +78,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;
