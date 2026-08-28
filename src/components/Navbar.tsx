@@ -37,36 +37,12 @@ const Navbar = () => {
           Teodorina L.
         </span>
         <div className="flex items-center gap-8 text-[11px] uppercase tracking-widest text-muted-foreground">
-          <a href="#projects" className="hover:text-foreground transition hidden md:block">
-            Projects
-          </a>
-          <a href="#about" className="hover:text-foreground transition hidden md:block">
-            About
-          </a>
-          
-            href="/documents/TeodorinaLungu_2026.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground transition hidden md:block"
-          >
-            CV
-          </a>
-          
-            href="/documents/Certificato_Partita_Iva.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground transition hidden md:block"
-          >
-            P.IVA
-          </a>
-          <a href="#contact" className="touch-btn">
-            Let's Get in Touch
-          </a>
-          <button
-            onClick={() => setDark(!dark)}
-            className="text-muted-foreground hover:text-foreground transition p-1"
-            aria-label="Toggle dark mode"
-          >
+          <a href="#projects" className="hover:text-foreground transition hidden md:block">Projects</a>
+          <a href="#about" className="hover:text-foreground transition hidden md:block">About</a>
+          <a href="/documents/TeodorinaLungu_2026.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition hidden md:block">CV</a>
+          <a href="/documents/Certificato_Partita_Iva.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition hidden md:block">P.IVA</a>
+          <a href="#contact" className="touch-btn">Let's Get in Touch</a>
+          <button onClick={() => setDark(!dark)} className="text-muted-foreground hover:text-foreground transition p-1" aria-label="Toggle dark mode">
             {dark ? <Sun size={16} /> : <Moon size={16} />}
           </button>
         </div>
