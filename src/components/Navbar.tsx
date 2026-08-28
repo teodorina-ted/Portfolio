@@ -44,6 +44,15 @@ const Navbar = () => {
             Projects
           </a>
           <a
+            href="https://teodorina.tech/links"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition hidden md:block"
+          >
+          Cyber Security Conference - IMOLA 2026
+          </a>
+          
+          <a
             href="#about"
             className="hover:text-foreground transition hidden md:block"
           >
