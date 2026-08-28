@@ -3,9 +3,9 @@ import ProjectCard from "./ProjectCard";
 const projects = [
   {
   status: "Live — Pilot",
-  statusColor: "text-green-500",
+  statusColor: "text-blue-500",
   title: "DataPrep ONIT",
-  previewUrl: "https://dataprep-jz4s.onrender.com",
+  previewUrl: "https://dataprep-1-n6uw.onrender.com",
   business:
     "A full-stack data preparation platform built for the ONIT Group AI team. Addresses the bottleneck of manual data cleaning in ML pipelines — where inconsistent formats, missing values, and schema drift slow down every downstream process.",
   goal: 'Architect a <strong>modular data preparation pipeline</strong> that covers the full cleaning lifecycle: <strong>CSV/Excel/JSON ingestion</strong>, missing value imputation (KNN, CTGAN, statistical strategies), outlier detection, bulk file merging, predictive analytics (Linear Regression, Random Forest, Gradient Boosting), and data validation against real baselines. Built to be adapted by non-technical teams with minimal configuration.',
@@ -24,7 +24,7 @@ const projects = [
     "Statistical Analysis",
     "ML Integration",
   ],
-  websiteUrl: "https://dataprep-jz4s.onrender.com",
+  websiteUrl: "https://dataprep-1-n6uw.onrender.com",
   githubUrl: "https://github.com/teodorina-ted/dataprep",
 },
   {
